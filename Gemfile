@@ -11,6 +11,8 @@ gem 'pg'
 gem 'twitter'
 # Haml for templating
 gem 'haml'
+# Nokogiri for HTML parsing
+gem 'nokogiri'
 
 group :development, :test do
   # Configure environment variables
@@ -27,6 +29,6 @@ end
 
 group :production do
   # Send logs to STDOUT
-  gem 'rails_12factor', group: :production
+  gem 'rails_12factor'
 end
 

@@ -2,8 +2,10 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-require 'dotenv'
-Dotenv.load
+if Sinatra::Base.development? 
+	require 'dotenv'
+	Dotenv.load
+end
 
 $stdout.sync = true
 

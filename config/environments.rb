@@ -1,6 +1,5 @@
-require 'dotenv'
-
 if File.exist?(".env")
+  require 'dotenv'
   Dotenv.load(".env")
 end
 

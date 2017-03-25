@@ -144,6 +144,7 @@ DEPENDENCIES
   byebug
   dotenv
   haml
+  nokogiri
   pg
   rails_12factor
   shotgun
