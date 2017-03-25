@@ -1,0 +1,15 @@
+!!!
+%html
+	%head
+		%title Shots fired here
+	%body
+		%h3 This is a list of all reported incidents of gun violence since someone last checked this page:
+		%ul
+			- @statuses.each do |status|
+				- idx = status.index('http')
+				- text = status[0..idx-1]
+				- link = status[idx..-1]
+				%li
+					= "#{text}" 
+					%a{ target: '_blank', href: "#{link}" }
+						%i= "#{link}"

@@ -7,7 +7,10 @@ gem "activerecord"
 gem "sinatra-activerecord"
 # Use Postgres as the database
 gem 'pg'
-
+# Twitter api
+gem 'twitter'
+# Haml for templating
+gem 'haml'
 
 group :development, :test do
   # Configure environment variables

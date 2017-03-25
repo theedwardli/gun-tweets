@@ -5,5 +5,7 @@ Bundler.require
 require 'dotenv'
 Dotenv.load
 
+$stdout.sync = true
+
 require './application'
 run Application
