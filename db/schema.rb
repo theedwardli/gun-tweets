@@ -17,13 +17,15 @@ ActiveRecord::Schema.define(version: 20170325044605) do
   enable_extension "plpgsql"
 
   create_table "incidents", force: :cascade do |t|
-    t.date    "incident_date"
-    t.string  "state"
-    t.string  "city_or_county"
-    t.text    "address"
-    t.integer "num_killed"
-    t.integer "num_injured"
-    t.string  "url"
+    t.date     "incident_date"
+    t.string   "state"
+    t.string   "city_or_county"
+    t.text     "address"
+    t.integer  "num_killed"
+    t.integer  "num_injured"
+    t.string   "url"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   add_index "incidents", ["incident_date", "address", "url"], name: "index_incidents_on_incident_date_and_address_and_url", unique: true, using: :btree

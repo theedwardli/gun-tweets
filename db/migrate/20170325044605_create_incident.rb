@@ -8,6 +8,8 @@ class CreateIncident < ActiveRecord::Migration
   		t.integer :num_killed
   		t.integer :num_injured
   		t.string :url
+
+      t.timestamps null: false
   	end
   	add_index :incidents, [:incident_date, :address, :url], :unique => true
   end
