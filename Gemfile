@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
+# Use Sinatra to build our application
 gem 'sinatra'
+# Use ActiveRecord
+gem "activerecord"
+gem "sinatra-activerecord"
+# Use Postgres as the database
+gem 'pg'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  # Configure environment variables
+  gem 'dotenv'
   # Reload server
   gem 'shotgun'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -20,13 +20,9 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-	# Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
 end
 
 group :production do
-  # Setup db
-  gem 'pg'
   # Send logs to STDOUT
   gem 'rails_12factor', group: :production
 end
