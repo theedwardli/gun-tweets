@@ -155,7 +155,7 @@ module Sinatra
           f.write img.read
         end
 
-        "images/#{incident_num}.jpg"
+        "/tmp/#{incident_num}.jpg"
       end
     end
 	end
