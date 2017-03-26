@@ -38,7 +38,7 @@ module Sinatra
       client = get_twitter_client
       statuses = []
 
-      incidents.each do |incident|
+      incidents.reverse.each do |incident|
         incident_date = incident[0]
         state = incident[1]
         city_or_county = incident[2]
