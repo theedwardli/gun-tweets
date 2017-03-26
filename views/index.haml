@@ -3,13 +3,15 @@
 	%head
 		%title Shots fired here
 	%body
-		%h3 This is a list of all reported incidents of gun violence since someone last checked this page:
+		%h3 This is a list of all reported incidents of gun violence in the last hour:
 		%ul
-			- @statuses.each do |status|
-				- idx = status.index('http')
-				- text = status[0..idx-1]
-				- link = status[idx..-1]
+			- @incidents.each do |incident|
+				- city = incident.city_or_county
+				- state = incident.state
+				- num_killed = incident.num_killed
+				- num_injured = incident.num_injured
+				- link = incident.url
 				%li
-					= "#{text}" 
+					= "#{city}, #{state}: #{num_killed} killed and #{num_injured} injured. Full report: " 
 					%a{ target: '_blank', href: "#{link}" }
 						%i= "#{link}"
