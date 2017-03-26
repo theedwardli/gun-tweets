@@ -1,0 +1,7 @@
+== README
+
+This is a Twitter bot that tracks gun violence in the United States. Data is scraped from {The Gun Violence Archive}[http://www.gunviolencearchive.org/]. 
+
+Core technologies: Sinatra, Twitter API, Google Maps API.
+
+See the bot in action here[https://twitter.com/shotsfiredhere].
